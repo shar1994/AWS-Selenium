@@ -1,4 +1,4 @@
-package AWS_Selenium_Maven;
+package com.automation.aws.testing.test;
 
 import org.testng.annotations.Test;
 
