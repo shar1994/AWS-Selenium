@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import org.testng.annotations.Test;
 
-public class TestCase1 {
+public class Search_TC {
   private WebDriver driver;
   private String baseUrl;
   
