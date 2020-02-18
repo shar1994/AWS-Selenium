@@ -2,16 +2,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.automation.aws.core</groupId>
-  <artifactId>com.automation.aws.core</artifactId>
+  <groupId>com.automation.aws.root</groupId>
+  <artifactId>com.automation.aws.root</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 <!--The identifier of the parent POM -->
 
-<modules>
-        <module>com.automation.aws.testing</module>
-    </modules>
-  <name>com.automation.aws.core</name>
+  <name>com.automation.aws.root</name>
   <url>http://maven.apache.org</url>
 
   <properties>
