@@ -3,18 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.automation.aws.testing.test.TestCase1"/>
+      <class name="com.automation.aws.testing.test.Search_TC"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.automation.aws.testing.test.TestCase1">
-        <methods>
-          <include name="close"/>
-          <include name="testCase1"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.automation.aws.testing.test.TestCase1 -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

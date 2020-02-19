@@ -6,13 +6,7 @@
   <artifactId>com.automation.aws.core</artifactId>
   <packaging>jar</packaging>
 
-  <name>com.automation.aws.core</name>
-  <url>http://maven.apache.org</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
+ 
 <parent>
     <groupId>com.automation.aws.root</groupId>
     <artifactId>com.automation.aws.root</artifactId>

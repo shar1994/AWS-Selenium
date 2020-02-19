@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2052" started-at="2020-02-19T11:42:36Z" finished-at="2020-02-19T11:42:38Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2052" started-at="2020-02-19T11:42:36Z" finished-at="2020-02-19T11:42:38Z">
+      <class name="com.automation.aws.utility.ExtentReport">
+        <test-method status="PASS" signature="Pre_report()[pri:0, instance:com.automation.aws.utility.ExtentReport@4cdbe50f]" name="Pre_report" is-config="true" duration-ms="922" started-at="2020-02-19T17:12:36Z" finished-at="2020-02-19T17:12:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Pre_report -->
+        <test-method status="PASS" signature="extentreport()[pri:0, instance:com.automation.aws.utility.ExtentReport@4cdbe50f]" name="extentreport" duration-ms="56" started-at="2020-02-19T17:12:37Z" finished-at="2020-02-19T17:12:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- extentreport -->
+        <test-method status="PASS" signature="exit_report()[pri:0, instance:com.automation.aws.utility.ExtentReport@4cdbe50f]" name="exit_report" is-config="true" duration-ms="1051" started-at="2020-02-19T17:12:37Z" finished-at="2020-02-19T17:12:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit_report -->
+      </class> <!-- com.automation.aws.utility.ExtentReport -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

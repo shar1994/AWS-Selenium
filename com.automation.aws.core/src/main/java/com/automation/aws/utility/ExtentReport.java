@@ -1,4 +1,4 @@
-package qa.automation.core;
+package com.automation.aws.utility;
 import java.io.IOException;
 
 import org.testng.annotations.AfterTest;
@@ -12,23 +12,23 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class ExtentReport {
-	ExtentHtmlReporter htmlReporter;
-	ExtentReports extent;
-	ExtentTest event;
 
-	@BeforeTest
-	public void Pre_report() {
+	
+	public static ExtentReports Instance() {
+	
 		// start reporters
-		htmlReporter = new ExtentHtmlReporter("./Extent-Report/extent.html");
+		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./Extent-Report/extent.html");
 
 		// create ExtentReports and attach reporter(s)
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
+		ExtentReports report = new ExtentReports();
+		report.attachReporter(htmlReporter);
 
 		// creates a toggle for the given test, adds all log events under it
-		event = extent.createTest("MyFirstTest", "Sample description");
-	}
-
+	//	ExtentTest event = report.createTest("TC Name", "TC description");
+		return report;
+	
+			}
+/*
 	@Test
 	public void extentreport() throws Exception {
 
@@ -49,7 +49,7 @@ public class ExtentReport {
 	@AfterTest
 	public void exit_report() {
 		// calling flush writes everything to the log file
-		extent.flush();
+		report.flush();
 	}
-
+*/
 }
