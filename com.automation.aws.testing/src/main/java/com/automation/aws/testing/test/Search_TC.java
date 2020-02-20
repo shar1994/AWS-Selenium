@@ -3,6 +3,7 @@ package com.automation.aws.testing.test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 import java.util.regex.Pattern;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import static org.hamcrest.CoreMatchers.*;
@@ -11,31 +12,40 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import com.automation.aws.driver.Driver;
-import com.automation.aws.utility.ExtentReport;
+import com.automation.aws.utility.Screenshot;
 import com.automation.aws.utility.Web;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.ScreenCapture;
 import com.automation.aws.testing.page.*;
 import org.openqa.selenium.support.FindBy;
 
 public class Search_TC extends Driver {
-	ExtentReports report;
-	ExtentTest event ;
+	
+
 	@BeforeClass
 	public void beforeClass() {
 		
+
 	
-	report = ExtentReport.Instance();
-	event = report.createTest("TC Name", "TC description");
 	}
 	@Test
 	public void testCase1() throws Exception {
-		
 		String Dishname1 = "Fried Rice";
+//Report Geneartion
+		log=  report.createTest("Zomato Automation","Test Report for Zomato");
+		
+		if(driver.getTitle().contains("Zomato")) {
+			log.pass("Title of the page is :- "+driver.getTitle());
+			log.log(Status.FAIL,"Naviagted :-"+driver.getTitle());
+			
+		}
 		System.out.println("Title of the Page :- " + driver.getTitle());
 		// Call Search Method
 		Homepage hm = new Homepage(driver);
@@ -48,13 +58,27 @@ public class Search_TC extends Driver {
 		RestrauantDetailPage rdp = new RestrauantDetailPage(driver);
 		rdp.sorting();
 		System.out.println("Searching High Rating Restaurant");
-		event.log(Status.FAIL, "exceptionInfo");
 	}
 
 	
 
 @AfterTest
 	public void endTest() {
+
+}
+@AfterMethod
+public void tearDown(ITestResult result) throws IOException
+{
+	
+	if(result.getStatus()==ITestResult.FAILURE)
+	{
+		String temp=Screenshot.getScreenshot(driver);
+		
+		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+	}
+	
 	report.flush();
+	driver.quit();
+	
 }
 }
