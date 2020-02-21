@@ -21,6 +21,7 @@ import com.automation.aws.utility.Web;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.MediaEntityModelProvider;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.ScreenCapture;
 import com.automation.aws.testing.page.*;
@@ -44,7 +45,8 @@ public class Search_TC extends Driver {
 		if(driver.getTitle().contains("Zomato")) {
 			log.pass("Title of the page is :- "+driver.getTitle());
 			log.log(Status.FAIL,"Naviagted :-"+driver.getTitle());
-			
+			log.fail("FAiled");
+			log.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("s.png").build());
 		}
 		System.out.println("Title of the Page :- " + driver.getTitle());
 		// Call Search Method
@@ -66,19 +68,5 @@ public class Search_TC extends Driver {
 	public void endTest() {
 
 }
-@AfterMethod
-public void tearDown(ITestResult result) throws IOException
-{
-	
-	if(result.getStatus()==ITestResult.FAILURE)
-	{
-		String temp=Screenshot.getScreenshot(driver);
-		
-		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-	}
-	
-	report.flush();
-	driver.quit();
-	
-}
+
 }

@@ -20,8 +20,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.ExtentReporter;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 //**************
 public class Driver {
@@ -60,7 +58,21 @@ public static WebDriver getDriverThread(long threadID) {
 	return driverThread.get(threadID);
 }
 //************
-
+@AfterMethod
+public void tearDown(ITestResult result) throws IOException
+{
+	
+	if(result.getStatus()==ITestResult.FAILURE)
+	{
+		String temp=Screenshot.getScreenshot(driver);
+		
+		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+	}
+	
+	report.flush();
+	driver.quit();
+	
+}
 
 //*******************END************
 }

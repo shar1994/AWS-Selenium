@@ -28,8 +28,8 @@ public class Screenshot {
 			
 			File src=ts.getScreenshotAs(OutputType.FILE);
 			
-			String path=System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png";
-			
+			//String path=System.getProperty("user.dir")+"/Screenshot/"+System.currentTimeMillis()+".png";
+			String path =System.getProperty("user.dir")+"./Extent-Report/"+System.currentTimeMillis()+".png";
 			File destination=new File(path);
 			
 			try 
