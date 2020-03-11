@@ -20,7 +20,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 //**************
 public class Driver {
 	  public WebDriver driver;
@@ -39,8 +39,8 @@ public class Driver {
 	  }
 	@BeforeMethod
 	  public void setUp() throws Exception {
-		  //System.setProperty("webdriver.chrome.driver","*/chromedriver.exe");
-	     WebDriverManager.chromedriver().setup();
+		System.setProperty("webdriver.chrome.driver","./Library/chromedriver.exe");
+	   
 		driver = new ChromeDriver();
 	   
 	    baseUrl = "https://www.zomato.com";
@@ -49,6 +49,8 @@ public class Driver {
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.get(baseUrl + "/bangalore"); 
+	  
+
 	}
 //**************
 
@@ -58,21 +60,21 @@ public static WebDriver getDriverThread(long threadID) {
 	return driverThread.get(threadID);
 }
 //************
-@AfterMethod
-public void tearDown(ITestResult result) throws IOException
-{
-	
-	if(result.getStatus()==ITestResult.FAILURE)
-	{
-		String temp=Screenshot.getScreenshot(driver);
-		
-		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
-	}
-	
-	report.flush();
-	driver.quit();
-	
-}
+//@AfterMethod
+//public void tearDown(ITestResult result) throws IOException
+//{
+//	
+//	if(result.getStatus()==ITestResult.FAILURE)
+//	{
+//		String temp=Screenshot.getScreenshot(driver);
+//		
+//		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
+//	}
+//	
+//	report.flush();
+//	driver.quit();
+//	
+//}
 
 //*******************END************
 }

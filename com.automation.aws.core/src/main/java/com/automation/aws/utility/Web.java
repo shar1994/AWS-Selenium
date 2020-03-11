@@ -22,8 +22,8 @@ public class Web extends Driver {
 	}
 
 	public void halt() {
-		   driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		   System.out.println("Waiting for 30 seconds");
+		   driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
+		   System.out.println("Waiting for 300 seconds");
 	}
 
 }

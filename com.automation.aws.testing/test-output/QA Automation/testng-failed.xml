@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [QA Automation]">
+  <test name="Sprint 1">
+    <classes>
+      <class name="com.automation.aws.testing.test.WriteExcel"/>
+      <class name="com.automation.aws.testing.test.ReadExcel"/>
+    </classes>
+  </test> <!-- Sprint 1 -->
+</suite> <!-- Failed suite [QA Automation] -->
