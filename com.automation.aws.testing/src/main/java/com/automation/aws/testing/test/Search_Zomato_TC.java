@@ -40,14 +40,14 @@ public class Search_Zomato_TC extends Driver {
 	public void testCase1() throws Exception {
 		String Dishname1 = "Fried Rice";
 //Report Geneartion
-		log=  report.createTest("Zomato Automation","Test Report for Zomato");
-		
-		if(driver.getTitle().contains("Zomato")) {
-			log.pass("Title of the page is :- "+driver.getTitle());
-			log.log(Status.FAIL,"Naviagted :-"+driver.getTitle());
-			log.fail("FAiled");
-			log.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("s.png").build());
-		}
+//		log=  report.createTest("Zomato Automation","Test Report for Zomato");
+//		
+//		if(driver.getTitle().contains("Zomato")) {
+//			log.pass("Title of the page is :- "+driver.getTitle());
+//			log.log(Status.FAIL,"Naviagted :-"+driver.getTitle());
+//			log.fail("FAiled");
+//			log.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("s.png").build());
+//		}
 		System.out.println("Title of the Page :- " + driver.getTitle());
 		// Call Search Method
 		Homepage hm = new Homepage(driver);
