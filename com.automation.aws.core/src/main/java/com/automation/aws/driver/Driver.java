@@ -46,6 +46,7 @@ public class Driver {
  */
 	@BeforeTest
 	  public void setUp() throws Exception {
+//		System.setProperty("webdriver.chrome.silentOutput", "true");
 		System.setProperty("webdriver.chrome.driver","./Library/chromedriver.exe");
 		driver = new ChromeDriver();
 //		driver = new FirefoxDriver(); 
@@ -55,7 +56,7 @@ public class Driver {
 	    // Maximize the browser
 	    driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    driver.get(baseUrl + "");
+	//    driver.get(baseUrl + "");
 
 	   
 	  

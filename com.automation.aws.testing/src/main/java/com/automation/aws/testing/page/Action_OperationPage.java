@@ -13,14 +13,29 @@ public class Action_OperationPage extends Driver {
 	
 
 
-	@FindBy(xpath = "//span[text()='Learning DHTMLX Suite UI']")
+	@FindBy(xpath = ".//span[text()='Learning DHTMLX Suite UI']")
 	WebElement src;
-	@FindBy(xpath = "//ul[@class='dhx_widget dhx_list ']")
+	@FindBy(xpath = ".//ul[@class='dhx_widget dhx_list ']")
 	WebElement dst;
 
-	public  Action_OperationPage(WebDriver driver) {
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
+	@FindBy(xpath = ".//div[@id='div1']")
+	WebElement div1;
+	@FindBy(xpath = ".//div[@class='divtrgt']")
+	WebElement div2;
+	@FindBy(xpath = ".//img[@class='imgsrc']")
+	WebElement imgsrc;
+	
+	@FindBy(xpath = ".//div[@id='SIvCob']")
+	WebElement divgoogle;
+	
+	
+	
+	
+	/***************Xpath End****************/
+
+	public  Action_OperationPage(WebDriver driver1) {
+		this.driver = driver1;
+		PageFactory.initElements(driver1, this);
 	}
 	
 	public void dragAndDrop() throws InterruptedException {
@@ -41,9 +56,9 @@ public class Action_OperationPage extends Driver {
 		
 		Thread.sleep(5000);
 
-	}
 	
-	 
+
+	}
 	public void clickHoldDrop() {
 		
 		Actions act = new Actions(driver);
@@ -51,7 +66,18 @@ public class Action_OperationPage extends Driver {
 		
 		System.out.println("Bye");
 	}
-	public void check() {
+	public void imgdragAndDrop() throws InterruptedException {
+		Actions act = new Actions(driver);
+	System.out.println("Img Enabled "+imgsrc.isEnabled());	
+		System.out.println("Dest Enabled "+div2.isEnabled());
 		
+		act.dragAndDrop(imgsrc, div2).build().perform();
+		Thread.sleep(5000);
+	}
+	
+	public void doubleClick() throws Exception {
+		Actions act = new Actions(driver);
+		act.doubleClick(divgoogle).build().perform();
+		Thread.sleep(5000);
 	}
 }

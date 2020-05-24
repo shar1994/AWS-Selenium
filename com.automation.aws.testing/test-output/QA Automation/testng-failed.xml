@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [QA Automation]">
+<suite thread-count="2" parallel="methods" name="Failed suite [QA Automation]" guice-stage="DEVELOPMENT">
   <test name="Sprint 1">
     <classes>
-      <class name="com.automation.aws.testing.test.WriteExcel"/>
-      <class name="com.automation.aws.testing.test.ReadExcel"/>
+      <class name="com.automation.aws.testing.test.SpamCommentUtube"/>
     </classes>
   </test> <!-- Sprint 1 -->
+  <test parallel="methods" name="Sprint 1(failed)">
+    <classes>
+      <class name="com.automation.aws.testing.test.SpamCommentUtube">
+        <methods>
+          <include name="setUp"/>
+          <include name="spamComment1"/>
+          <include name="teardown"/>
+          <include name="spamComment"/>
+        </methods>
+      </class> <!-- com.automation.aws.testing.test.SpamCommentUtube -->
+    </classes>
+  </test> <!-- Sprint 1(failed) -->
 </suite> <!-- Failed suite [QA Automation] -->

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="QA Automation" parallel="false">
+<suite name="QA Automation" thread-count = "2" parallel="methods">
   <test name="Sprint 1">
     <classes>
       
-      <class name="com.automation.aws.testing.test.WriteExcel"/>
-      
-      <class name="com.automation.aws.testing.test.ReadExcel"/>
+      <class name="com.automation.aws.testing.test.SpamCommentUtube"/>
+ 
     </classes>
   </test> <!-- Sprint 1 -->
 </suite> <!-- QA Automation -->
