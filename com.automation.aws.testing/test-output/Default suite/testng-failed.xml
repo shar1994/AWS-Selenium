@@ -3,7 +3,20 @@
 <suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test" verbose="2">
     <classes>
-      <class name="com.automation.aws.testing.test.Keyboard_Keys"/>
+      <class name="com.automation.aws.testing.test.Search_Zomato_TC"/>
     </classes>
   </test> <!-- Default test -->
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="com.automation.aws.testing.test.Search_Zomato_TC">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testCase1"/>
+          <include name="beforeClass"/>
+          <include name="endTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.automation.aws.testing.test.Search_Zomato_TC -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

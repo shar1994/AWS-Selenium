@@ -25,67 +25,65 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 //**************
 public class Driver {
-	 public static WebDriver driver;
-	  public static String baseUrl;
-	  public static Properties p;
-	  private static Map<Long,WebDriver> driverThread = new HashMap<Long,WebDriver>();
-	  public ExtentReports report;
-	  public ExtentTest log;
-	
-/*Reporting
+	public static WebDriver driver;
+	public static String baseUrl;
+	public static Properties p;
+	private static Map<Long, WebDriver> driverThread = new HashMap<Long, WebDriver>();
+	public ExtentReports report;
+	public ExtentTest log;
 
-	  @BeforeSuite
-	  public void setupReport() {
-		  ExtentHtmlReporter extent = new ExtentHtmlReporter(new File("./Extent-Report/extent.html"));
-		  report = new ExtentReports();
-		  report.attachReporter(extent);
-	
-	  }	  
- */
+	/*
+	 * Reporting
+	 * 
+	 * @BeforeSuite public void setupReport() { ExtentHtmlReporter extent = new
+	 * ExtentHtmlReporter(new File("./Extent-Report/extent.html")); report = new
+	 * ExtentReports(); report.attachReporter(extent);
+	 * 
+	 * }
+	 */
 	@BeforeTest
-	  public void setUp() throws Exception {
+	public void setUp() throws Exception {
 //		System.setProperty("webdriver.chrome.silentOutput", "true");
-		System.setProperty("webdriver.chrome.driver","./Library/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver","./Library/chromedriver");
+		// For Linux
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 //		driver = new FirefoxDriver(); 
-	    baseUrl = "https://automationeveryday.blogspot.com/";
+		baseUrl = "https://automationeveryday.blogspot.com/";
 //	    baseUrl = "https://www.zomato.com/";
-	    System.out.println("Navigated to :- "+baseUrl);
-	    // Maximize the browser
-	    driver.manage().window().maximize();
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	//    driver.get(baseUrl + "");
-
-	   
-	  
+		System.out.println("Navigated to :- " + baseUrl);
+		// Maximize the browser
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(baseUrl + "");
 
 	}
 //**************
 
 //*************
-/*public static WebDriver getDriverThread(long threadID) {
-	// TODO Auto-generated method stub
-	return driverThread.get(threadID);
-}
-*/
+	/*
+	 * public static WebDriver getDriverThread(long threadID) { // TODO
+	 * Auto-generated method stub return driverThread.get(threadID); }
+	 */
 
-@AfterMethod
-public void tearDown(ITestResult result) throws IOException
-{
-	
+	@AfterMethod
+	public void tearDown(ITestResult result) throws IOException {
+
 //	if(result.getStatus()==ITestResult.FAILURE)
 //	{
 //		String temp=Screenshot.getScreenshot(driver);
 //		
 //		log.fail(result.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(temp).build());
 //	}
-	
+
 //	report.flush();
-	driver.quit();
-	
-}
+		driver.quit();
+
+	}
 
 //*******************END************
 }
