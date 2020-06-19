@@ -8,15 +8,16 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import junit.framework.Assert;
 
 
 public class Login_StepDefination {
 
-	WebDriver driver;
+	public static WebDriver driver;
 	@Given("^user should be on login page$")
 	public void user_should_be_on_login_page()  {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Admin\\git\\AWS-Selenium\\com.automation.aws.testing\\Library\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.get("https://freecrm.com/");
 	}
@@ -29,11 +30,11 @@ public class Login_StepDefination {
 	  driver.findElement(By.xpath("//span[text()='Log In']")).click();
 	}
 
-	@Then("^user enters username and password$")
-	public void user_enters_username_and_password() {
+	@Then("^user enters \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enters_username_and_password(String username , String password) {
 	
-		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("RAatet");
-		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("RAatet");		
+		driver.findElement(By.xpath("//input[@name='email']"));
+		driver.findElement(By.xpath("//input[@name='password']"));		
 	}
 
 	@Then("^user click on login button$")
@@ -43,6 +44,7 @@ public class Login_StepDefination {
 
 	@Then("^user is on homepage$")
 	public void user_is_on_homepage(){
+		System.out.println("Title of the Page is :- "+driver.getTitle());
 
 	}
 	@And("^close browser$")
