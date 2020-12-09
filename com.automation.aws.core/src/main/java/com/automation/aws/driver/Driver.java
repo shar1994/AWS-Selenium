@@ -56,11 +56,11 @@ public class Driver {
 //		driver = new FirefoxDriver(); 
 		baseUrl = "https://automationeveryday.blogspot.com/";
 //	    baseUrl = "https://www.zomato.com/";
-		System.out.println("Navigated to :- " + baseUrl);
+	//	System.out.println("Navigated to :- " + baseUrl);
 		// Maximize the browser
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(baseUrl + "");
+		//driver.get(baseUrl + "");
 
 	}
 //**************

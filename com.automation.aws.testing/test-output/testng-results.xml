@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-05T16:41:56Z" name="Default suite" finished-at="2020-12-05T16:42:20Z" duration-ms="24302">
+  <suite name="Default suite" duration-ms="14169" started-at="2020-12-08T17:29:47Z" finished-at="2020-12-08T17:30:01Z">
     <groups>
     </groups>
-    <test started-at="2020-12-05T16:41:56Z" name="Default test" finished-at="2020-12-05T16:42:20Z" duration-ms="24302">
-      <class name="com.automation.aws.testing.test.HandleTestDataUsingExcel">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.aws.testing.test.HandleTestDataUsingExcel@57576994]" started-at="2020-12-05T22:11:56Z" name="setUp" finished-at="2020-12-05T22:12:08Z" duration-ms="12805" status="PASS">
+    <test name="Default test" duration-ms="14169" started-at="2020-12-08T17:29:47Z" finished-at="2020-12-08T17:30:01Z">
+      <class name="com.automation.aws.testing.test.GenericMethodForSelectDropdown">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="setUp" is-config="true" duration-ms="8319" started-at="2020-12-08T22:59:47Z" finished-at="2020-12-08T22:59:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="EnterGoogleSearch()[pri:0, instance:com.automation.aws.testing.test.HandleTestDataUsingExcel@57576994]" started-at="2020-12-05T22:12:08Z" name="EnterGoogleSearch" finished-at="2020-12-05T22:12:19Z" duration-ms="10515" status="PASS">
+        <test-method status="PASS" signature="DemoTest()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="DemoTest" duration-ms="4795" started-at="2020-12-08T22:59:55Z" finished-at="2020-12-08T23:00:00Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EnterGoogleSearch -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.aws.testing.test.HandleTestDataUsingExcel@57576994]" started-at="2020-12-05T22:12:19Z" name="tearDown" finished-at="2020-12-05T22:12:20Z" duration-ms="957" status="PASS">
+        </test-method> <!-- DemoTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="tearDown" is-config="true" duration-ms="1026" started-at="2020-12-08T23:00:00Z" finished-at="2020-12-08T23:00:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=EnterGoogleSearch status=SUCCESS method=HandleTestDataUsingExcel.EnterGoogleSearch()[pri:0, instance:com.automation.aws.testing.test.HandleTestDataUsingExcel@57576994] output={null}]]]>
+                <![CDATA[[TestResult name=DemoTest status=SUCCESS method=GenericMethodForSelectDropdown.DemoTest()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.automation.aws.testing.test.HandleTestDataUsingExcel -->
+      </class> <!-- com.automation.aws.testing.test.GenericMethodForSelectDropdown -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
