@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="QA Automation" thread-count = "2" parallel="methods">
-  <test name="Sprint 1">
-    <classes>
-      
-      <class name="com.automation.aws.testing.test.SpamCommentUtube"/>
- 
-    </classes>
-  </test> <!-- Sprint 1 -->
-</suite> <!-- QA Automation -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="methods" thread-count="10">
+<test name="Test">
+
+
+<packages>
+    <!-- Packages who contains the test cases classes -->
+    <package name="test" />       
+</packages>
+  </test>
+</suite>

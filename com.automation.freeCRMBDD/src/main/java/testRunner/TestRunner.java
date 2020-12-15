@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features ="/home/sharad/git/AWS-Selenium/com.automation.freeCRMBDD/src/main/java/feature/login.feature",
+		features ="Feature",
 		glue = "stepDefination",
 		plugin = {"html:target/cucumber-html-report"}
 		)

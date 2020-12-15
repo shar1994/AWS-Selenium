@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14169" started-at="2020-12-08T17:29:47Z" finished-at="2020-12-08T17:30:01Z">
+  <suite name="Default suite" duration-ms="19714" started-at="2020-12-13T17:29:50Z" finished-at="2020-12-13T17:30:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14169" started-at="2020-12-08T17:29:47Z" finished-at="2020-12-08T17:30:01Z">
-      <class name="com.automation.aws.testing.test.GenericMethodForSelectDropdown">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="setUp" is-config="true" duration-ms="8319" started-at="2020-12-08T22:59:47Z" finished-at="2020-12-08T22:59:55Z">
+    <test name="Default test" duration-ms="19714" started-at="2020-12-13T17:29:50Z" finished-at="2020-12-13T17:30:10Z">
+      <class name="test.CheckTextIsBold">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.CheckTextIsBold@29626d54]" name="setUp" is-config="true" duration-ms="12193" started-at="2020-12-13T22:59:50Z" finished-at="2020-12-13T23:00:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="DemoTest()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="DemoTest" duration-ms="4795" started-at="2020-12-08T22:59:55Z" finished-at="2020-12-08T23:00:00Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:test.CheckTextIsBold@29626d54]" name="test" duration-ms="6362" started-at="2020-12-13T23:00:02Z" finished-at="2020-12-13T23:00:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DemoTest -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed]" name="tearDown" is-config="true" duration-ms="1026" started-at="2020-12-08T23:00:00Z" finished-at="2020-12-08T23:00:01Z">
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.CheckTextIsBold@29626d54]" name="tearDown" is-config="true" duration-ms="1135" started-at="2020-12-13T23:00:08Z" finished-at="2020-12-13T23:00:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=DemoTest status=SUCCESS method=GenericMethodForSelectDropdown.DemoTest()[pri:0, instance:com.automation.aws.testing.test.GenericMethodForSelectDropdown@19bb07ed] output={null}]]]>
+                <![CDATA[[TestResult name=test status=SUCCESS method=CheckTextIsBold.test()[pri:0, instance:test.CheckTextIsBold@29626d54] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.automation.aws.testing.test.GenericMethodForSelectDropdown -->
+      </class> <!-- test.CheckTextIsBold -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
