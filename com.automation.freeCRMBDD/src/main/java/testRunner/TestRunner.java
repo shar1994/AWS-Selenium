@@ -1,14 +1,13 @@
 package testRunner;
 
+
+
 import org.junit.runner.RunWith;
-
-import cucumber.api.CucumberOptions;
-
-import cucumber.api.junit.Cucumber;
+import io.cucumber.testng.CucumberOptions;
 
 
-@RunWith(Cucumber.class)
 @CucumberOptions(
+		publish = true,
 		features ="Feature",
 		glue = "stepDefination",
 		plugin = {"html:target/cucumber-html-report"}

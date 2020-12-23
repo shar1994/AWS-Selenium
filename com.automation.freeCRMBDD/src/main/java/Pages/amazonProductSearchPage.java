@@ -18,6 +18,7 @@ public class amazonProductSearchPage extends driver{
 	}
 	public void SearchProduct(String product) {
 		By txtSearch = By.id("twotabsearchtextbox");
+		element.getElement(txtSearch).clear();
 	    element.getElement(txtSearch).sendKeys(product);
 	    element.getElement(txtSearch).sendKeys(Keys.RETURN);
 	}
